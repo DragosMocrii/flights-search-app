@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../resources/frontend/src/App.svelte",
+    "../../resources/frontend/src/routes/NotFound.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import Router from \"svelte-spa-router\";\n  import routes from \"./routes\";\n</script>\n\n<style lang=\"scss\">main {\n  color: red; }\n/*# sourceMappingURL=src/App.svelte.map */</style>\n\n<main>\n  <Router {routes} />\n</main>\n",
+    "<style>\n  div {\n    color: red;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9yb3V0ZXMvTm90Rm91bmQuc3ZlbHRlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7RUFDRTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvcm91dGVzL05vdEZvdW5kLnN2ZWx0ZSIsInNvdXJjZXNDb250ZW50IjpbIlxuICBkaXYge1xuICAgIGNvbG9yOiByZWQ7XG4gIH1cbiJdfQ== */</style>\n\n<div>404 Not found</div>\n"
+  ],
+  "names": [],
+  "mappings": "AAKmB,IAAI,eAAC,CAAC,AACvB,KAAK,CAAE,GAAG,AAAE,CAAC;ACLb,GAAG,cAAC,CAAC,AACH,KAAK,CAAE,GAAG,AACZ,CAAC"
+}
