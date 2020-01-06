@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Authenticate user by email/password and return access token
+Route::get( '/auth', 'API\AuthController@show' );
+// Create new user
+Route::post( '/users', 'API\UserController@store' );
+
+Route::middleware( [ 'auth:api' ] )->group( function () {
+    Route::get( '/airports', 'API\AirportController@index' );
+    Route::get( '/airlines', 'API\AirlineController@index' );
+    Route::apiResource( 'trips', 'API\TripController' )->except( [ 'update' ] );
+
+    Route::get( '/search/{hash_id}', 'API\SearchController@show' );
+    Route::post( '/search', 'API\SearchController@store' );
+} );

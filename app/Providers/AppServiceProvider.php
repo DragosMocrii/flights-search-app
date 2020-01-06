@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Jobs\ProcessSearchQuery;
+use Illuminate\Queue\Events\JobProcessed;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Passport\Passport;
 
 class AppServiceProvider extends ServiceProvider {
     /**
@@ -12,7 +14,7 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        Passport::ignoreMigrations();
+        //
     }
 
     /**
