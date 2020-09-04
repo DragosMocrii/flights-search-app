@@ -9,7 +9,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.1.0",
     "autoprefixer": "^9.7.3",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "postcss": "^7.0.26",
     "postcss-load-config": "^2.1.0",
     "rollup": "^1.28.0",
